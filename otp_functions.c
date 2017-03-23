@@ -113,7 +113,7 @@ int otp_server(const char *port, int mode) {
             perror("accept");
             close(inboundfd);
         } else {
-            /* Fork of a process to handle the client */
+            /* Fork a process to handle the client */
             spawnpid = fork();
             switch(spawnpid) {
                 /* Error condition */
