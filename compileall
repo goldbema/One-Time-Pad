@@ -1,0 +1,13 @@
+#!/bin/bash
+
+BUILD="otp_functions.c socket_utils.c file_utils.c msg_utils.c cipher_utils.c signal_utils.c"
+
+gcc -o otp_dec_d otp_dec_d.c $(echo $BUILD)
+
+gcc -o otp_dec otp_dec.c $(echo $BUILD)
+
+gcc -o otp_enc_d otp_enc_d.c $(echo $BUILD)
+
+gcc -o otp_enc otp_enc.c $(echo $BUILD)
+
+gcc -o keygen keygen.c
